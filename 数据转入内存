@@ -1,0 +1,27 @@
+### 以下方式可以把数据转入内存中调用
+```
+#### 方法1
+cashe={}
+def a1(n):
+    if n in cashe:
+        return cashe[n]
+    if n<=2:
+        value= 1
+    else:
+        value= a1(n-1) + a1(n-2)
+    cashe[n]=value
+    return value
+a1(100)
+
+
+#### 方法2
+from functools import lru_cache
+@lru_cache(maxsize=1000)
+def a1(n):
+    if n!= int:
+        raise TypeError("hahah")
+    if n<=2:
+        return 1
+    else:
+        return a1(n-1) + a1(n-2)
+```     
