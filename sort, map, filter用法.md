@@ -8,3 +8,6 @@ a
 ```
 # sorted 的用法
 ## 直接sorted 数据，不改变列表
+```
+sorted(map(size,a))
+```
